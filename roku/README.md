@@ -27,7 +27,7 @@ Frames are read from the WebGL canvas, so the settings button and the hint line 
 
 ## Regenerate the video
 
-Needs Node 22 or newer, Google Chrome and ffmpeg. Set `CHROME` if the binary is not `google-chrome`. A discrete GPU helps. Without one, Chrome falls back to a software renderer and a 1080p frame at the default cloud scale takes roughly 2.5–3 seconds, so one tile (2048 frames) is about an hour and a half and three tiles is several hours. The recorder steps the scene itself, so a slow frame never becomes a stutter, and the same seed always makes the same film.
+Needs Node 22 or newer, Google Chrome and ffmpeg. Set `CHROME` if the binary is not `google-chrome`. A discrete GPU helps. Without one, Chrome falls back to a software renderer and a 1080p frame at the default cloud scale takes about 3 seconds, so one tile is roughly two hours and three tiles is most of a day. The recorder steps the scene itself, so a slow frame never becomes a stutter, and the same seed always makes the same film.
 
 ```bash
 node roku/capture.mjs --probe          # two stills, one tile apart; checks the join
