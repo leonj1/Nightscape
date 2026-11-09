@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="NightscapeSettings" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/NightscapeSettings.brs" />
+  <interface>
+    <field id="viewWidth" type="integer" value="1280" onChange="onLayout" />
+    <field id="viewHeight" type="integer" value="720" onChange="onLayout" />
+    <field id="currentUrl" type="string" value="" onChange="onCurrent" />
+    <field id="builtInUrl" type="string" value="" onChange="onBuiltIn" />
+    <field id="typedUrl" type="string" value="" />
+    <field id="action" type="string" value="" />
+    <field id="done" type="boolean" value="false" alwaysNotify="true" />
+  </interface>
+  <children>
+    <Rectangle id="bg" color="0x04070FFF" />
+    <Poster id="hero" uri="pkg:/images/fallback.jpg" loadDisplayMode="scaleToFill" />
+    <Rectangle id="dim" color="0x04070FDD" />
+    <Label id="title" text="Nightscape" color="0xD9ECE8FF" />
+    <Label id="help" wrap="true" color="0xD9ECE8FF" />
+    <Label id="builtin" wrap="true" color="0x9BB8B4FF" />
+    <TextEditBox id="box" hintText="https://example.com/nightscape/" maxTextLength="500" />
+    <Button id="save" text="Save" />
+    <Button id="clear" text="Clear saved URL" />
+  </children>
+</component>

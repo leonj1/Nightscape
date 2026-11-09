@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="NightscapeScreen" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/NightscapeScreen.brs" />
+  <interface>
+    <field id="playback" type="boolean" value="false" onChange="onPlayback" />
+    <field id="baseUrl" type="string" value="" />
+    <field id="fps" type="float" value="8" />
+    <field id="frameCount" type="integer" value="0" />
+    <field id="frameWidth" type="integer" value="1280" />
+    <field id="frameHeight" type="integer" value="720" />
+    <field id="viewWidth" type="integer" value="1280" onChange="onLayout" />
+    <field id="viewHeight" type="integer" value="720" onChange="onLayout" />
+    <field id="message" type="string" value="" onChange="onMessage" />
+    <field id="advance" type="integer" value="0" onChange="onTick" />
+  </interface>
+  <children>
+    <Rectangle id="bg" color="0x04070FFF" />
+    <Poster id="fallback" uri="pkg:/images/fallback.jpg" loadDisplayMode="scaleToFill" />
+    <Poster id="frameA" loadDisplayMode="scaleToFill" opacity="0" />
+    <Poster id="frameB" loadDisplayMode="scaleToFill" opacity="0" />
+    <Label id="note" wrap="true" horizAlign="center" color="0xD9ECE8FF" />
+  </children>
+</component>
